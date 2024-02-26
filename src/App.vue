@@ -3,6 +3,7 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import NavBar from '@/components/NavBar.vue';
+import VisuoPitch from './components/VisuoPitch.vue';
 
 </script>
 
@@ -11,18 +12,27 @@ import NavBar from '@/components/NavBar.vue';
 
     <NavBar />
 
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-  
+    
+    
+    <!-- <nav>
+      <RouterLink to="/">Home</RouterLink>
+      <RouterLink to="/about">About</RouterLink>
+    </nav> -->
+    
   </header>
-
+  
   <RouterView />
 
+<div>
+
+  <VisuoPitch />
+  
+</div>
 </template>
 
 <style scoped>
+
+
+
 
 </style>

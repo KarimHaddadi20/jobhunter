@@ -20,14 +20,13 @@
 
 <style scoped>
 
-body {
-  background-color: #FBFDFF;
-}
 
 .navbar {
   display: flex;
   justify-content: space-between;
   padding: 1em;
+  margin-bottom: 80px;
+  
 }
 
 .logo {
@@ -43,13 +42,12 @@ display: flex;
 
 
 .nav-link {
-    
 display: inline-block;
-
 font-family: "Ubuntu", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  margin-right: 20em;
+font-weight: 400;
+font-style: normal;
+margin-right: 12em;
+  
 
 }
 </style>
