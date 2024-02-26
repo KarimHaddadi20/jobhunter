@@ -1,6 +1,4 @@
 // src/services/website.js
-
-
 import instance from "./api.js";
 
 
@@ -22,6 +20,5 @@ console.log(response);
 console.log(response.data.list);
 
 return response.data;
-
 
 }
