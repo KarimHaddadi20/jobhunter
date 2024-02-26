@@ -10,36 +10,23 @@ import Confidence from './components/Confidence.vue';
 
 <template>
   <header>
-
     <NavBar />
-
-    
-    
     <!-- <nav>
       <RouterLink to="/">Home</RouterLink>
       <RouterLink to="/about">About</RouterLink>
     </nav> -->
-    
   </header>
   
   <!-- <RouterView /> -->
-  
   <div>
-    
     <VisuoPitch />
-    
   </div>
 
 <div>
-
   <Confidence />
-
 </div>
+
 </template>
 
 <style scoped>
-
-
-
-
 </style>
