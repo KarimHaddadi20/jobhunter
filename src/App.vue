@@ -22,7 +22,7 @@ import Confidence from './components/Confidence.vue';
     
   </header>
   
-  <RouterView />
+  <!-- <RouterView /> -->
   
   <div>
     

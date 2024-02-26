@@ -6,6 +6,11 @@
 
 </div>
 
+
+<div class="image-container">
+    <img class="img1" src="@/assets/confiance1.png"  alt="Description de l'image 1">
+    <img class="img2" src="@/assets/confiance2.jpg" alt="Description de l'image 2">
+  </div>
 </template>
 
 <script setup>
@@ -23,4 +28,21 @@ font-size: 25px;
 text-align: center;
 }
 
+
+.image-container {
+    display: flex;
+    justify-content: center; /* Centrage horizontal */
+    align-items: center; /* Centrage vertical */
+    height: 25vh;
+
+  }
+  
+  .image-container img  {
+    width: 10%;
+    margin: 0 10px; /* Ajustez cette valeur selon vos besoins */
+    
+    }
+
+
+    
 </style>
