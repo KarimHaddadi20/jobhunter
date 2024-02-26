@@ -3,29 +3,30 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import NavBar from '@/components/NavBar.vue';
-import VisuoPitch from './components/VisuoPitch.vue';
-import Confidence from './components/Confidence.vue';
+import VisuoPitch from '@/components/VisuoPitch.vue';
+import Confidence from '@/components/Confidence.vue';
 
 </script>
 
 <template>
   <header>
     <NavBar />
-    <!-- <nav>
-      <RouterLink to="/">Home</RouterLink>
+   <nav>
+      <!-- <RouterLink to="/">Home</RouterLink>
       <RouterLink to="/about">About</RouterLink>
-    </nav> -->
+       -->
+    </nav>
   </header>
   
-  <!-- <RouterView /> -->
   <div>
     <VisuoPitch />
   </div>
-
-<div>
-  <Confidence />
-</div>
-
+  
+  <div>
+    <Confidence />
+  </div>
+  
+  <RouterView />
 </template>
 
 <style scoped>
