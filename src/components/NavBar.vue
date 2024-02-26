@@ -19,6 +19,11 @@
 </script>
 
 <style scoped>
+
+body {
+  background-color: #FBFDFF;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -40,9 +45,11 @@ display: flex;
 .nav-link {
     
 display: inline-block;
+
 font-family: "Ubuntu", sans-serif;
   font-weight: 400;
   font-style: normal;
-  margin: 0 5em;
+  margin-right: 20em;
+
 }
 </style>
