@@ -1,8 +1,10 @@
+<!-- LoginView -->
+
 <template>
   <div class="signup-page">
     <div class="content-container">
       <div class="signup-container">
-        <h2>Login</h2>
+        <h2>Se connecter</h2>
 
         <p v-if="error">ERREUR : {{ error }}</p>
         <p v-if="success">success : {{ success }}</p>
@@ -32,6 +34,7 @@ import { ref } from "vue";
 import userInstance from "@/services/user";
 import { cryptoPassword } from "@/services/utils.js";
 import { useStore } from "@/stores/user.js";
+import { useRouter } from 'vue-router';
 
 
 let form = ref({
@@ -81,10 +84,14 @@ async function login() {
 
   success.value = "bonjour " + user.list[0].name;
 }
+const router = useRouter();
 
 async function logout() {
   useStore().setUser(null);
+  router.push("/");
 }
+
+
 </script>
 
 <style scoped>

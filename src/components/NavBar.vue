@@ -1,3 +1,5 @@
+<!-- NavBar.vue -->
+
 <template>
 
     <nav class="navbar">
@@ -7,8 +9,8 @@
           </a>
         </div>
         <div>
-          <router-link to="/signup" class="nav-link">Sign Up</router-link>
-          <router-link to="/login" class="nav-link">Login</router-link>
+          <router-link to="/signup" class="nav-link">S'inscrire</router-link>
+          <router-link to="/login" class="nav-link">Se connecter</router-link>
         </div>
       </nav>
 
