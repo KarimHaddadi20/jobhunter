@@ -31,6 +31,7 @@
 import { ref } from "vue";
 import userInstance from "@/services/user";
 import { cryptoPassword } from "@/services/utils.js";
+import { useStore } from "@/stores/user.js";
 
 let form = ref({
   name: "karim",
@@ -75,7 +76,13 @@ async function login() {
     return false;
   }
 
+  useStore().setUser(user.list[0]);
+
   success.value = "bonjour " + user.list[0].name;
+}
+
+async function logout() {
+  useStore().setUser(null);
 }
 </script>
 

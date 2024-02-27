@@ -2,6 +2,13 @@
 
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
+import { useStore } from "@/stores/user.js";
+import { computed } from "vue";
+
+const userInfo = computed(() => {
+  return useStore().getUser;
+
+});
 
 </script>
 
@@ -11,6 +18,8 @@ import { RouterLink, RouterView } from 'vue-router'
       <!-- <RouterLink to="/">Home</RouterLink>
       <RouterLink to="/about">About</RouterLink>
        -->
+
+       {{ userInfo }}
     </nav>
   </header>
   
