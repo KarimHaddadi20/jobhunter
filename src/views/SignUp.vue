@@ -82,5 +82,9 @@ h2 {
   color: #666; /* Adjust as needed */
 }
 
+.signup-container input[type="submit"] {
+  margin-top: 20px; /* Adjust as needed */
+  
+}
 
 </style>
