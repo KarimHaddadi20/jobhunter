@@ -1,5 +1,8 @@
+<!-- SignView.vue -->
+
 <template>
-    <div>
+
+    <div class="signup-container">
       <h2>Sign Up</h2>
   
       <form @submit.prevent="submitForm">
