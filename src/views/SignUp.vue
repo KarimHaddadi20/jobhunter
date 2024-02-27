@@ -1,20 +1,27 @@
+<!-- SignUp.vue -->
+
 <template>
   <div class="signup-page">
     <div class="content-container">
     <div class="signup-container">
       <h2>Sign Up</h2>
   
+      <p v-if="error">ERREUR : {{ error }}</p>
+      <p v-if="success">success : {{ success }}</p>
+      <form @submit.prevent="submitForm($event)">     
+        <label for="lname"> Name:</label><br>
+        <input type="text" id="lname" v-model="form.name"><br>
 
-      <form @submit.prevent="submitForm">
-        <label for="fname">First Name:</label><br>
-        <input type="text" id="fname" v-model="fname"><br>
-        <label for="lname">Last Name:</label><br>
-        <input type="text" id="lname" v-model="lname"><br>
         <label for="email">Email:</label><br>
-        <input type="email" id="email" v-model="email"><br>
+        <input type="email" id="email" v-model="form.email"><br>
         <label for="pwd">Password:</label><br>
-        <input type="password" id="pwd" v-model="pwd"><br>
-        <input type="submit" value="Submit">
+        <input type="password" id="pwd" v-model="form.pwd"><br>        
+        <!-- <input type="submit" value="Submit"> -->
+        <p>
+          <button class="create-account-button" @click="createAccount">Crée un compte</button>
+          <button class="login-button" @click="login">Se connecter</button>
+          <button  class="logout-button" @click="logout">Déconnexion</button>
+        </p>
       </form> 
     </div>
     <img src="@/assets/signup.png" alt="img">
@@ -23,22 +30,87 @@
 </template>
 
 <script>
+import { ref } from "vue";
+import userInstance from "@/services/user";
+import { cryptoPassword } from "@/services/utils.js";
+import { useStore } from "@/stores/user.js";
+
 export default {
-  data() {
-    return {
-      fname: '',
-      lname: '',
-      email: '',
-      pwd: ''
-    }
-  },
-  methods: {
-    submitForm() {
-      // Handle form submission here
-      // You can access form data using this.fname, this.lname, this.email, and this.pwd
-    }
+  setup() {
+
+let form = ref({
+  name: "karim",
+  email: "karim23@gmail.com",
+  pwd: "thisisapassword",
+});
+
+let error = ref(null);
+let success = ref(null);
+
+async function createAccount() {
+  console.clear();
+  console.log(form.value);
+
+  error.value = null;
+  success.value = null;
+
+  let user = await userInstance.exists(form.value.email);
+  if (user.list.length > 0) {
+    error.value = "Email already exists";
+    return false;
+  }
+
+  let data = await userInstance.create(
+    form.value.email,
+    cryptoPassword(form.value.pwd),
+    form.value.name
+  );
+  success.value = "Account created successfully";
+}
+
+async function login() {
+  error.value = null;
+  success.value = null;
+  let user = await userInstance.login(
+    form.value.email,
+    cryptoPassword(form.value.pwd)
+  );
+
+  if (user.list.length != 1) {
+    error.value = "Email or password incorrect";
+    return false;
+  }
+
+  useStore().setUser(user.list[0]);
+
+  success.value = "bonjour " + user.list[0].name;
+}
+
+async function logout() {
+  useStore().setUser(null);
+}
+
+
+async function submitForm(event) {
+  if (event.target.innerText === 'Login') {
+    await login();
+  } else {
+    await createAccount();
   }
 }
+return {
+  form,
+  error,
+  success,
+  createAccount,
+  login,
+  logout,
+  submitForm
+};
+}
+};
+
+
 </script>
 
 <style scoped>
@@ -150,7 +222,53 @@ input[type="text"] {
   color: rgb(0, 0, 0);
 }
 
+.create-account-button  {
+  background-color: #6f3bb8; /* Changer la couleur de fond */
+  color: white; /* Changer la couleur du texte */
+  border: none; /* Supprimer la bordure */
+  padding: 10px 27px; /* Ajouter du padding */
+  text-align: center; /* Centrer le texte */
+  text-decoration: none; /* Supprimer le soulignement du texte */
+  display: inline-block;
+  font-size: 14px;
+  margin: 8px 2*px;
+  border-radius: 12px;
+  margin-top: 25px;
+}
 
+.login-button {
+  background-color: #ffffff; /* Changer la couleur de fond */
+  color:#6f3bb8; /* Changer la couleur du texte */
+  border: none; /* Supprimer la bordure */
+  padding: 7px 35px; /* Ajouter du padding */
+  text-align: center; /* Centrer le texte */
+  text-decoration: none; /* Supprimer le soulignement du texte */
+  display: inline-block;
+  font-size: 14px;
+  margin: 8px 2px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #6f3bb8;
+}
+
+
+.logout-button {
+  background-color: #ffffff; /* Changer la couleur de fond */
+  color:#6f3bb8; /* Changer la couleur du texte */
+  border: none; /* Supprimer la bordure */
+  padding: 7px 35px; /* Ajouter du padding */
+  text-align: center; /* Centrer le texte */
+  text-decoration: none; /* Supprimer le soulignement du texte */
+  display: inline-block;
+  font-size: 14px;
+  margin: 9px 2px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #6f3bb8;
+
+}
 
 
 </style>

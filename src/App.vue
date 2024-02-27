@@ -18,8 +18,12 @@ const userInfo = computed(() => {
       <!-- <RouterLink to="/">Home</RouterLink>
       <RouterLink to="/about">About</RouterLink>
        -->
-
        {{ userInfo }}
+
+       <RouterLink v-if="userInfo == null" to="/login">Login</RouterLink>
+       <RouterLink v-else to="/signup">Logout</RouterLink>
+
+       <span v-else>{{ userInfo.name }}</span>
     </nav>
   </header>
   

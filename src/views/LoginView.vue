@@ -16,7 +16,7 @@
           <input type="password" id="pwd" v-model="form.pwd" /><br />
           <input type="submit" value="Submit" />
           <p>
-            <button @click="createAccount">Create Account</button>
+            <!-- <button @click="createAccount">Create Account</button> -->
             <button @click="login">Login</button>
             <button @click="logout">Logout</button>
           </p>
@@ -32,6 +32,7 @@ import { ref } from "vue";
 import userInstance from "@/services/user";
 import { cryptoPassword } from "@/services/utils.js";
 import { useStore } from "@/stores/user.js";
+
 
 let form = ref({
   name: "karim",
