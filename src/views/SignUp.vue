@@ -139,4 +139,11 @@ input[type="password"] {
   border-radius: 10px;
 }
 
+form {
+  color: rgb(0, 0, 0);
+}
+input[type="text"] {
+  color: rgb(0, 0, 0);
+}
+
 </style>
