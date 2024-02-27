@@ -14,11 +14,11 @@
           <input type="email" id="email" v-model="form.email" /><br />
           <label for="pwd">Password:</label><br />
           <input type="password" id="pwd" v-model="form.pwd" /><br />
-          <input type="submit" value="Submit" />
+<!-- !          <input type="submit" value="Submit" /> -->
           <p>
             <!-- <button @click="createAccount">Create Account</button> -->
-            <button @click="login">Login</button>
-            <button @click="logout">Logout</button>
+            <button class="login-button" @click="login">Login</button>
+            <button class="logout-button" @click="logout">Logout</button>
           </p>
         </form>
       </div>
@@ -205,4 +205,54 @@ form {
 input[type="text"] {
   color: rgb(0, 0, 0);
 }
+
+.login-button {
+  background-color: #ffffff; /* Changer la couleur de fond */
+  color:#6f3bb8; /* Changer la couleur du texte */
+  border: none; /* Supprimer la bordure */
+  padding: 7px 35px; /* Ajouter du padding */
+  text-align: center; /* Centrer le texte */
+  text-decoration: none; /* Supprimer le soulignement du texte */
+  display: inline-block;
+  font-size: 14px;
+  margin: 8px 2px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #6f3bb8;
+}
+
+.login-button {
+  background-color: #6f3bb8; /* Changer la couleur de fond */
+  color:#ffffff; /* Changer la couleur du texte */
+  border: none; /* Supprimer la bordure */
+  padding: 7px 35px; /* Ajouter du padding */
+  text-align: center; /* Centrer le texte */
+  text-decoration: none; /* Supprimer le soulignement du texte */
+  display: inline-block;
+  font-size: 14px;
+  margin: 9px 2px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #6f3bb8;
+
+}
+.logout-button {
+  background-color: #ffffff; /* Changer la couleur de fond */
+  color:#6f3bb8; /* Changer la couleur du texte */
+  border: none; /* Supprimer la bordure */
+  padding: 7px 30px; /* Ajouter du padding */
+  text-align: center; /* Centrer le texte */
+  text-decoration: none; /* Supprimer le soulignement du texte */
+  display: inline-block;
+  font-size: 14px;
+  margin: 9px 2px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #6f3bb8;
+
+}
+
 </style>
