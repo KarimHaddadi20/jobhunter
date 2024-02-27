@@ -86,6 +86,9 @@ export default {
       useStore().setUser(user.list[0]);
 
       success.value = "bonjour " + user.list[0].name;
+
+      router.push("/annonce");
+
     }
 
     const router = useRouter();
