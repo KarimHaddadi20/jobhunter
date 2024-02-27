@@ -73,6 +73,8 @@ async function login() {
   let user = await userInstance.login(
     form.value.email,
     cryptoPassword(form.value.pwd)
+
+    
   );
 
   if (user.list.length != 1) {
@@ -83,6 +85,9 @@ async function login() {
   useStore().setUser(user.list[0]);
 
   success.value = "bonjour " + user.list[0].name;
+
+router.push("/annonce");
+
 }
 const router = useRouter();
 
