@@ -45,6 +45,13 @@ async function createAccount() {
   console.clear();
   console.log(form.value);
 
+
+  let user = await userInstance.exists(form.value.email);
+  if (user.list.length > 0) {
+    error.value = "Email already exists";
+    return false;
+  }
+
   let data = await userInstance.create(
     form.value.email,
     cryptoPassword(form.value.pwd),

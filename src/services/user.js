@@ -2,7 +2,18 @@ import instance from "./api.js";
 
 class User {
   //
-  async exists(email) {}
+  async exists(email) {
+const response = await instance.get(`/user/`, {
+params: {
+    where : `(email,eq,${email})`,
+    },
+    });
+    
+    return response.data;
+
+}
+
+
 
   async login(email, password) {}
 
