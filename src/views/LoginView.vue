@@ -16,7 +16,7 @@
           <input type="email" id="email" v-model="form.email" /><br />
           <label for="pwd">Password:</label><br />
           <input type="password" id="pwd" v-model="form.pwd" /><br />
-<!-- !          <input type="submit" value="Submit" /> -->
+          <!-- !          <input type="submit" value="Submit" /> -->
           <p>
             <!-- <button @click="createAccount">Create Account</button> -->
             <button class="login-button" @click="login">Se connecter</button>
@@ -34,8 +34,7 @@ import { ref } from "vue";
 import userInstance from "@/services/user";
 import { cryptoPassword } from "@/services/utils.js";
 import { useStore } from "@/stores/user.js";
-import { useRouter } from 'vue-router';
-
+import { useRouter } from "vue-router";
 
 let form = ref({
   name: "karim",
@@ -73,8 +72,6 @@ async function login() {
   let user = await userInstance.login(
     form.value.email,
     cryptoPassword(form.value.pwd)
-
-    
   );
 
   if (user.list.length != 1) {
@@ -86,8 +83,7 @@ async function login() {
 
   success.value = "bonjour " + user.list[0].name;
 
-router.push("/annonce");
-
+  router.push("/annonce");
 }
 const router = useRouter();
 
@@ -95,8 +91,6 @@ async function logout() {
   useStore().setUser(null);
   router.push("/");
 }
-
-
 </script>
 
 <style scoped>
@@ -218,11 +212,9 @@ input[type="text"] {
   color: rgb(0, 0, 0);
 }
 
-
-
 .login-button {
   background-color: #6f3bb8; /* Changer la couleur de fond */
-  color:#ffffff; /* Changer la couleur du texte */
+  color: #ffffff; /* Changer la couleur du texte */
   border: none; /* Supprimer la bordure */
   padding: 7px 32px; /* Ajouter du padding */
   text-align: center; /* Centrer le texte */
@@ -234,12 +226,10 @@ input[type="text"] {
   display: flex;
   flex-direction: column;
   border: 1px solid #6f3bb8;
-  
-
 }
 .logout-button {
   background-color: #ffffff; /* Changer la couleur de fond */
-  color:#6f3bb8; /* Changer la couleur du texte */
+  color: #6f3bb8; /* Changer la couleur du texte */
   border: none; /* Supprimer la bordure */
   padding: 7px 30px; /* Ajouter du padding */
   text-align: center; /* Centrer le texte */
@@ -251,7 +241,5 @@ input[type="text"] {
   display: flex;
   flex-direction: column;
   border: 1px solid #6f3bb8;
-
 }
-
 </style>
