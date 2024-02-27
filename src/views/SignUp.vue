@@ -60,4 +60,27 @@ export default {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adjust as needed */
 }
 
+h2 {
+  font-size: 2em;
+  font-weight: 700;
+  font-family: "Roboto Slab", sans-serif;
+  margin-bottom: 20px;
+  color: #4157D6;
+}
+
+
+.signup-container label {
+  font-family: "Roboto Slab", sans-serif;
+  font-size: 14px; /* Adjust as needed */
+  color: #666; /* Adjust as needed */
+  text-transform: none;
+}
+
+.signup-container input {
+  font-family: "Roboto Slab", sans-serif;
+  font-size: 15px; /* Adjust as needed */
+  color: #666; /* Adjust as needed */
+}
+
+
 </style>
