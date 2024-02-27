@@ -105,4 +105,16 @@ input[type="submit"]:hover {
   background-color: #45a049; /* Changer la couleur de fond lors du survol */
 }
 
+input[type="text"] {
+  background-color: #f2f2f2; /* Changer la couleur de fond */
+  color: rgba(0, 0, 0, 0); /* Changer la couleur du texte */
+  width: 100%; /* Changer la largeur */
+  padding: 5px 12px; /* Changer le padding */
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-color: rgba(205, 205, 205, 0); /* Assurez-vous que la largeur et la hauteur incluent le padding et la bordure */
+  border-radius: 10px;
+}
+
+
 </style>
