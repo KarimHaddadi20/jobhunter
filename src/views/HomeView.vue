@@ -29,10 +29,8 @@ onMounted(() => {
 <template>
 
   <h1>
-    Home
   </h1>
 
-  {{ websites }}
 
   <div>
     <VisuoPitch />
