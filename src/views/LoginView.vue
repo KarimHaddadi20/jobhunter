@@ -17,8 +17,8 @@
 <!-- !          <input type="submit" value="Submit" /> -->
           <p>
             <!-- <button @click="createAccount">Create Account</button> -->
-            <button class="login-button" @click="login">Login</button>
-            <button class="logout-button" @click="logout">Logout</button>
+            <button class="login-button" @click="login">Se connecter</button>
+            <button class="logout-button" @click="logout">Déconnexion</button>
           </p>
         </form>
       </div>
@@ -226,7 +226,7 @@ input[type="text"] {
   background-color: #6f3bb8; /* Changer la couleur de fond */
   color:#ffffff; /* Changer la couleur du texte */
   border: none; /* Supprimer la bordure */
-  padding: 7px 35px; /* Ajouter du padding */
+  padding: 7px 32px; /* Ajouter du padding */
   text-align: center; /* Centrer le texte */
   text-decoration: none; /* Supprimer le soulignement du texte */
   display: inline-block;
