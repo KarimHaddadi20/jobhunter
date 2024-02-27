@@ -86,5 +86,23 @@ h2 {
   margin-top: 20px; /* Adjust as needed */
   
 }
+input[type="submit"] {
+  background-color: #6f3bb8; /* Changer la couleur de fond */
+  color: white; /* Changer la couleur du texte */
+  border: none; /* Supprimer la bordure */
+  padding: 15px 32px; /* Ajouter du padding */
+  text-align: center; /* Centrer le texte */
+  text-decoration: none; /* Supprimer le soulignement du texte */
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer; /* Changer le curseur en main lorsque vous survolez */
+  transition-duration: 0.4s; /* Ajouter une animation lors du survol */
+  border-radius: 12px;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049; /* Changer la couleur de fond lors du survol */
+}
 
 </style>
