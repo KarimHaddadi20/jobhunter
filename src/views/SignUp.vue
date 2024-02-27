@@ -126,6 +126,8 @@ input[type="email"] {
   box-sizing: border-box;
   border-color: rgba(205, 205, 205, 0); /* Assurez-vous que la largeur et la hauteur incluent le padding et la bordure */
   border-radius: 10px;
+  color: rgb(0, 0, 0);
+
 }
 
 input[type="password"] {
@@ -137,6 +139,8 @@ input[type="password"] {
   box-sizing: border-box;
   border-color: rgba(205, 205, 205, 0); /* Assurez-vous que la largeur et la hauteur incluent le padding et la bordure */
   border-radius: 10px;
+  color: rgb(0, 0, 0);
+
 }
 
 form {
@@ -145,5 +149,8 @@ form {
 input[type="text"] {
   color: rgb(0, 0, 0);
 }
+
+
+
 
 </style>
