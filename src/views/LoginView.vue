@@ -45,6 +45,9 @@ async function createAccount() {
   console.clear();
   console.log(form.value);
 
+  error.value = null;
+  success.value = null;
+
 
   let user = await userInstance.exists(form.value.email);
   if (user.list.length > 0) {
