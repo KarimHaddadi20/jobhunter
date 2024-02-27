@@ -218,21 +218,7 @@ input[type="text"] {
   color: rgb(0, 0, 0);
 }
 
-.login-button {
-  background-color: #ffffff; /* Changer la couleur de fond */
-  color:#6f3bb8; /* Changer la couleur du texte */
-  border: none; /* Supprimer la bordure */
-  padding: 7px 35px; /* Ajouter du padding */
-  text-align: center; /* Centrer le texte */
-  text-decoration: none; /* Supprimer le soulignement du texte */
-  display: inline-block;
-  font-size: 14px;
-  margin: 8px 2px;
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #6f3bb8;
-}
+
 
 .login-button {
   background-color: #6f3bb8; /* Changer la couleur de fond */
@@ -248,6 +234,7 @@ input[type="text"] {
   display: flex;
   flex-direction: column;
   border: 1px solid #6f3bb8;
+  
 
 }
 .logout-button {

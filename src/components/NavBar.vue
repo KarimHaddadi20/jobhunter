@@ -50,8 +50,17 @@ display: inline-block;
 font-family: "Ubuntu", sans-serif;
 font-weight: 400;
 font-style: normal;
-margin-right: 12em;
+margin-right: 15em;
+color: #0D74CE;
   
+border: 1px solid #7DCEDC; /* Change 'blue' to any color you want */
+background-color: white; /* Change 'white' to any color you want */
+text-decoration: none; /* Removes the underline */
+padding: 8px; /* Adds some space around the text */
+border-radius: 5px; /* Rounds the corners of the button */
+}
 
+.nav-link:not(:last-of-type) {
+  margin-right: 1em; /* Adjust this value to your needs */
 }
 </style>
