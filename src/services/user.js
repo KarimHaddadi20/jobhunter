@@ -1,15 +1,20 @@
 import instance from "./api.js";
 
-
 class User {
+  //
+  async exists(email) {}
 
-//
-async exists (email)  {}
+  async login(email, password) {}
 
-async exists (email, password)  {}
+  async create(email, password, name) {
+    const response = await instance.post("/user/", {
+      email: email,
+      password: password,
+      name: name,
+    });
 
-async exists (email, password, name)  {}
-
+    return response.data;
+  }
 }
 
 const userInstance = new User();
