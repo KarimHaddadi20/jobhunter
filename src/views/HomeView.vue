@@ -5,6 +5,8 @@
 
 import { WebsiteGetAll } from "@/services/website.js";
 import { ref, onMounted } from 'vue';
+import VisuoPitch from '@/components/VisuoPitch.vue';
+import Confidence from '@/components/Confidence.vue';
 
 
 const websites = ref([]);
@@ -32,6 +34,14 @@ onMounted(() => {
 
   {{ websites }}
 
+  <div>
+    <VisuoPitch />
+  </div>
+  
+  <div>
+    <Confidence />
+  </div>
+  
 </template>
 
 

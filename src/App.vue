@@ -3,8 +3,6 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import NavBar from '@/components/NavBar.vue';
-import VisuoPitch from '@/components/VisuoPitch.vue';
-import Confidence from '@/components/Confidence.vue';
 
 </script>
 
@@ -18,14 +16,7 @@ import Confidence from '@/components/Confidence.vue';
     </nav>
   </header>
   
-  <div>
-    <VisuoPitch />
-  </div>
-  
-  <div>
-    <Confidence />
-  </div>
-  
+
   <RouterView />
 </template>
 
