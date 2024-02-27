@@ -7,6 +7,7 @@ import { WebsiteGetAll } from "@/services/website.js";
 import { ref, onMounted } from 'vue';
 import VisuoPitch from '@/components/VisuoPitch.vue';
 import Confidence from '@/components/Confidence.vue';
+import NavBar from '@/components/NavBar.vue';
 
 
 const websites = ref([]);
@@ -30,6 +31,13 @@ onMounted(() => {
 
   <h1>
   </h1>
+
+  <div>
+
+    <NavBar />
+
+  </div>
+  
 
 
   <div>
