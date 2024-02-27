@@ -20,10 +20,10 @@ const userInfo = computed(() => {
        -->
        <!-- {{ userInfo }} -->
 
-       <RouterLink v-if="userInfo == null" to="/login">Login</RouterLink>
-       <RouterLink v-else to="/signup">Logout</RouterLink>
+       <!-- <RouterLink v-if="userInfo == null" to="/login">Login</RouterLink> -->
+       <!-- <RouterLink v-else to="/signup">Logout</RouterLink>
 
-       <span v-else>{{ userInfo.name }}</span>
+       <span v-else>{{ userInfo.name }}</span> -->
     </nav>
   </header>
   
