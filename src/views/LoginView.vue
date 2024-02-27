@@ -48,7 +48,6 @@ async function createAccount() {
   error.value = null;
   success.value = null;
 
-
   let user = await userInstance.exists(form.value.email);
   if (user.list.length > 0) {
     error.value = "Email already exists";
@@ -61,6 +60,22 @@ async function createAccount() {
     form.value.name
   );
   success.value = "Account created successfully";
+}
+
+async function login() {
+  error.value = null;
+  success.value = null;
+  let user = await userInstance.login(
+    form.value.email,
+    cryptoPassword(form.value.pwd)
+  );
+
+  if (user.list.length != 1) {
+    error.value = "Email or password incorrect";
+    return false;
+  }
+
+  success.value = "bonjour " + user.list[0].name;
 }
 </script>
 
