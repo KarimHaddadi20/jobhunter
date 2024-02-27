@@ -20,7 +20,6 @@ class User {
     });
 
     return response.data;
-
   }
 
   async create(email, password, name) {
