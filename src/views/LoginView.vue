@@ -59,7 +59,7 @@ async function login() {
 
   success.value = "bonjour " + user.list[0].name;
 
-  router.push("/annonce");
+  router.push("/candidacy");
 }
 const router = useRouter();
 
