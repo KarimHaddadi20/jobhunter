@@ -98,6 +98,11 @@
     align-items: center;
     height: 100vh; /* Utilisez 100vh pour prendre toute la hauteur de la fenêtre de visualisation */
     background-color: skyblue;
+    margin: auto;
+    height: 70vh;
+    width: 60%;
+    border-radius: 2%;
+    margin-bottom: 60px;
   }
   
   .form-container {
