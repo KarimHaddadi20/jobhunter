@@ -8,8 +8,8 @@
       </div>
   
       <div class="content">
-        <component :is="view" :candidacies="candidacies"></component>
-    </div>
+        <component :is="view"></component>
+      </div>
     </div>
   </template>
   
