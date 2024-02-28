@@ -1,5 +1,7 @@
 <template>
 
+    <div class="container">
+
     <div class="form-container">
     <form @submit.prevent="submitForm">
       <div>
@@ -34,6 +36,12 @@
   
       <button type="submit">Soumettre</button>
     </form>
+
+    <div class="image-container">
+        <img src="@/assets/homepicture.jpg" alt="Description de l'image">
+      </div>
+
+    </div>
     </div>
   </template>
   
@@ -64,10 +72,50 @@
 
 
 <style scoped>
-.form-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50vh; /* Utilisez 100vh pour prendre toute la hauteur de la fenêtre de visualisation */
-}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Utilisez 100vh pour prendre toute la hauteur de la fenêtre de visualisation */
+    background-color: skyblue;
+  }
+  
+  .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .form-container form, .image-container {
+    flex: 1;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Utilisez 100vh pour prendre toute la hauteur de la fenêtre de visualisation */
+    background-color: skyblue;
+  }
+  
+  .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .form-container form, .image-container {
+    flex: 1;
+  }
+
+
+  
+.image-container img {
+    width: 90%; /* Ajustez cette valeur pour changer la largeur de l'image */
+    height: auto; /* Ajustez cette valeur pour changer la hauteur de l'image */
+  }
 </style>
