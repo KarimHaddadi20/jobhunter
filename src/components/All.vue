@@ -1,7 +1,30 @@
 <template>
-  <p>Here are all the applications</p>
+  <div>
+    <h1>Liste des candidatures</h1>
+    <ul>
+      <li v-for="candidacy in candidacies" :key="candidacy.id">
+        <h2>{{ candidacy.Title }}</h2>
+        <p>{{ candidacy.society }}</p>
+        <p>{{ candidacy.location }}</p>
+        <p>{{ candidacy.date }}</p>
+        <p>{{ candidacy.demande }}</p>
+
+        <!-- Ajoutez plus de détails sur la candidature ici -->
+      </li>
+    </ul>
+  </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { ref, onMounted } from 'vue';
+import candidacyInstance from "@/services/candidacy.js";
 
-<style scoped></style>
+const candidacies = ref([]);
+
+onMounted(async () => {
+
+  const response = await candidacyInstance.getAll();
+  candidacies.value = response.list;
+  console.log(candidacies.value);
+});
+</script>

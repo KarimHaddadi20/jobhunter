@@ -9,10 +9,10 @@
         <input id="title" v-model="form.title" type="text" required>
       </div>
   
-      <div>
+      <!-- <div>
         <label for="logo">Logo:</label>
         <input id="logo" v-model="form.logo" type="text" required>
-      </div>
+      </div> -->
   
       <div>
         <label for="society">Nom de la société:</label>

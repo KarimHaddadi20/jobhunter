@@ -27,3 +27,8 @@ npm run dev
 ```sh
 npm run build
 ```
+
+### todolist 
+
+- authentification qui permettra d'avoir un identifiant pour chaque user qui on lui méme va avoir tout les données chargé basé sur les jetons comme JWT (JSON Web Token),
+
