@@ -9,6 +9,8 @@
         <p>{{ candidacy.date }}</p>
         <p>{{ candidacy.demande }}</p>
 
+        <button @click="deleteCandidacy(candidacy.id)">Supprimer</button>
+
         <!-- Ajoutez plus de détails sur la candidature ici -->
       </li>
     </ul>
@@ -27,4 +29,6 @@ onMounted(async () => {
   candidacies.value = response.list;
   console.log(candidacies.value);
 });
+
+
 </script>

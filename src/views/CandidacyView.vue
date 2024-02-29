@@ -42,13 +42,10 @@ onMounted(() => {
 
     <div>
 <NavCandidacy />
-<div v-for="candidacy in candidacies" :key="candidacy.id">
-    <h2>{{ candidacy.title }}</h2>
-    <p>{{ candidacy.society }}</p>
+
     <!-- Add more fields as needed -->
   </div>
 
-    </div>
 
 </template>
 

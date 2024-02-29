@@ -2,9 +2,9 @@
     <div class="container">
       <div class="nav">
         <button @click="view = 'all'">Tout</button>
-        <button @click="view = 'received'">Reçu</button>
+        <!-- <button @click="view = 'received'">Reçu</button>
         <button @click="view = 'processing'">En cours de traitement</button>
-        <button @click="view = 'refused'">Refusé</button>
+        <button @click="view = 'refused'">Refusé</button> -->
       </div>
   
       <div class="content">
@@ -59,7 +59,6 @@
     flex-direction: column;
     width: 200px;
     height: 100vh;
-    background-color: #000000;
     padding: 20px;
     margin-right: 20px;
   }
@@ -69,6 +68,7 @@
   }
   
   .content {
-    flex-grow: 1;
+    flex-grow: 12;
+    
   }
   </style>
