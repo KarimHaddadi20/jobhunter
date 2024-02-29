@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import LoginView from '../views/LoginView.vue'
 import AnnonceView from '../views/AnnonceView.vue'
 import CandidacyView from '../views/CandidacyView.vue'
+import ListView from '../views/ListView.vue'
 
 
 const router = createRouter({
@@ -43,6 +44,13 @@ const router = createRouter({
       path: '/candidacy',
       name: 'candidacy',
       component: CandidacyView
+    },
+
+    {
+
+      path: '/list',
+      name: 'list',
+      component: ListView
     },
 
   ]

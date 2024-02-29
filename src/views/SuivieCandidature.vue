@@ -3,6 +3,7 @@ import { WebsiteGetAll } from "@/services/website.js";
 import { ref, onMounted } from "vue";
 import DataTable from "@/components/DataTable.vue";
 import NavCandidacy from "@/components/NavCandidacy.vue";
+import trackingInstance from "@/services/trackingapp.js";
 
 
 

@@ -60,6 +60,7 @@ const addJob = async () => {
     newJob[key] = '';
   }
 };
+
 </script>
 
 <style scoped>

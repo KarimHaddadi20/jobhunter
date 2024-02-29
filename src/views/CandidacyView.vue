@@ -7,7 +7,7 @@ import DataTable from "@/components/DataTable.vue";
 import candidacyInstance from "@/services/candidacy.js";
 import trackingappInstance from "@/services/trackingapp.js";
 import NavCandidacy from "@/components/NavCandidacy.vue";
-
+import List from "@/components/List.vue";
 
 
 const websites = ref([]);
@@ -19,30 +19,20 @@ async function loadData() {
   websites.value = data.list;
   console.log(websites.value); // Ajoutez cette ligne
 
-
-
   let candidacyData = await candidacyInstance.getAll();
   candidacies.value = candidacyData;
   console.log(candidacies.value); // Ajoutez cette ligne
 
-
-
-let trackingappData = await trackingappInstance.getAll();
+  let trackingappData = await trackingappInstance.getAll();
   trackingapp.value = trackingappData;
   console.log(trackingapp.value); // Ajoutez cette ligne
-
-
 }
 
 onMounted(() => {
   loadData();
 });
 
-
-
 // import Calendar from 'primevue/calendar';
-
-
 </script>
 
 <template>
@@ -52,24 +42,21 @@ onMounted(() => {
     <AnnonceNav />
   </div>
 
+  <div>
+    <Landing />
+  </div>
 
   <div>
-<Landing />
+    <DataTable />
+    <NavCandidacy />
   </div>
 
 
-    <div>
+  <div>
 
-      <DataTable />
-      <NavCandidacy />
+<List />
 
   </div>
-
-
-
 </template>
 
-<style scoped>
-
-
-</style>
+<style scoped></style>

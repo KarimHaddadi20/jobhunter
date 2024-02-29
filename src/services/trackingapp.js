@@ -8,7 +8,7 @@ class Trackingapp {
 
     async create(society, status, deadline, description) {
         try {
-            console.log({society, status, deadline, description }); // Ajoutez cette ligne
+            console.log({society, status, deadline, description}); // Ajoutez cette ligne
     
             const response = await instance.post("/trackingapp/", {
                 society: society,

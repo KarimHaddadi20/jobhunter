@@ -23,10 +23,9 @@ onMounted(() => {
   </div>
 
   <div>
-
-<Formulaire />
-
+    <Formulaire />
   </div>
 </template>
+
 
 <style scoped></style>

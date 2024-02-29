@@ -4,6 +4,7 @@ import { ref, onMounted } from "vue";
 import VisuoPitch from "@/components/VisuoPitch.vue";
 import Confidence from "@/components/Confidence.vue";
 import NavBar from "@/components/NavBar.vue";
+import List from "@/components/List.vue";
 
 const websites = ref([]);
 
@@ -37,6 +38,9 @@ onMounted(() => {
   <DataTable />
 </div>
 
+<div>
+  <List />
+</div>
 
 </template>
 
