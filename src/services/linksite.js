@@ -3,7 +3,7 @@
 import instance from "./api.js";
 
 class linksite {
-    async getAll(title, url, logo) {
+    async getAll() {
         const response = await instance.get(`/list/`,);
         return response.data;
     }

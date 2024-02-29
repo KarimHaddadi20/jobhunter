@@ -1,4 +1,4 @@
-<!-- src/components/List.vue -->
+<!-- src/components/List.vie -->
 
 <template>
     <div>
@@ -20,6 +20,10 @@
   
   onMounted(async () => {
     linksite.value = await linksiteInstance.getAll();
+    console.log(linksite); // Ajoutez cette ligne
+    linksite.value = linksite.value.list;
+
+
   });
   </script>
 

@@ -7,8 +7,6 @@ import DataTable from "@/components/DataTable.vue";
 import candidacyInstance from "@/services/candidacy.js";
 import trackingappInstance from "@/services/trackingapp.js";
 import NavCandidacy from "@/components/NavCandidacy.vue";
-import List from "@/components/List.vue";
-
 
 const websites = ref([]);
 const candidacies = ref([]);
@@ -49,13 +47,6 @@ onMounted(() => {
   <div>
     <DataTable />
     <NavCandidacy />
-  </div>
-
-
-  <div>
-
-<List />
-
   </div>
 </template>
 
