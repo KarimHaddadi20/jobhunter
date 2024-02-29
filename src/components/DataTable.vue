@@ -15,6 +15,8 @@
           <td>{{ job.status }}</td>
           <td>{{ job.deadline }}</td>
           <td>{{ job.description }}</td>
+          <td><button @click="deleteJob(job.id)">Supprimer</button></td>
+
         </tr>
       </tbody>
     </table>
@@ -30,12 +32,16 @@
 </template>
 
 <script setup>
-import { ref, reactive } from 'vue';
+import { ref, reactive, onMounted } from 'vue';
 import trackingappInstance from "@/services/trackingapp.js";
 
-const jobs = ref([
-  // ... existing jobs
-]);
+const jobs = ref([]);
+
+
+const deleteJob = (id) => {
+  jobs.value = jobs.value.filter(job => job.id !== id);
+  localStorage.setItem('jobs', JSON.stringify(jobs.value));
+};
 
 const newJob = reactive({
   society: '',
@@ -46,13 +52,18 @@ const newJob = reactive({
 
 const addJob = async () => {
   jobs.value.push({ ...newJob, id: Date.now() });
+  localStorage.setItem('jobs', JSON.stringify(jobs.value));
 
   try {
-    await trackingappInstance.create(newJob.society, newJob.status, newJob.deadline, newJob.description);
+    await trackingappInstance.create({
+      society: newJob.society,
+      status: newJob.status,
+      deadline: newJob.deadline,
+      description: newJob.description
+    });
     console.log('Job ajouté avec succès à la base de données');
   } catch (error) {
     console.error('Une erreur est survenue lors de l\'ajout du job à la base de données', error);
-
     console.log(error.response.data);
   }
 
@@ -61,6 +72,9 @@ const addJob = async () => {
   }
 };
 
+onMounted(() => {
+  jobs.value = JSON.parse(localStorage.getItem('jobs')) || [];
+});
 </script>
 
 <style scoped>
