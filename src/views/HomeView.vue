@@ -38,9 +38,7 @@ onMounted(() => {
   <DataTable />
 </div>
 
-<div>
-  <List />
-</div>
+
 
 </template>
 

@@ -8,9 +8,9 @@
       </a>
     </div>
     <div>
-      <router-link to="/annonce" class="nav-link">Annonces</router-link>
-      <router-link to="/formulaire" class="nav-link">Formulaire</router-link>
-      <router-link to="/suivie" class="nav-link">Suivie</router-link>
+      <router-link to="/" class="nav-link">Annonces</router-link>
+      <router-link to="/annonce" class="nav-link">Formulaire</router-link>
+      <router-link to="/candidacy" class="nav-link">Suivie</router-link>
       <router-link to="/list" class="nav-link">Recherche</router-link>
     </div>
   </nav>
