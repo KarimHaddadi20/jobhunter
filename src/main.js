@@ -1,21 +1,21 @@
-//Src/main.js
-
-import "./assets/main.scss";
-
-import { createApp } from "vue";
-import { createPinia } from "pinia";
-
-import App from "./App.vue";
-import router from "./router";
+import { createApp } from 'vue';
+import App from './App.vue';
+import router from './router';
+import { createPinia } from 'pinia';
 
 const app = createApp(App);
 
 app.use(createPinia());
-
-import { useStore } from "./stores/user.js";
-
-app.provide("store", useStore());
-
 app.use(router);
 
-app.mount("#app");
+import { useStore } from "./stores/user.js";
+app.provide("store", useStore());
+
+
+
+import PrimeVue from 'primevue/config';
+app.use(PrimeVue);
+import 'primevue/resources/themes/aura-light-green/theme.css'
+
+
+app.mount('#app');

@@ -10,6 +10,7 @@
     <div>
       <router-link to="/signup" class="nav-link">S'inscrire</router-link>
       <router-link to="/login" class="nav-link">Se connecter</router-link>
+      
     </div>
   </nav>
 </template>

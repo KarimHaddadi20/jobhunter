@@ -14,7 +14,6 @@ class Candidacy {
       demande: demande,
       location: location,
       date: date,
-    
     });
 
     return response.data;

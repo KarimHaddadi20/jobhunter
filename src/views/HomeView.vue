@@ -31,6 +31,13 @@ onMounted(() => {
   <div>
     <Confidence />
   </div>
+
+<div>
+
+  <DataTable />
+</div>
+
+
 </template>
 
 <style scoped></style>
