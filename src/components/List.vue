@@ -1,26 +1,27 @@
-<script setup>
-import { ref, onMounted } from "vue";
-import List from "@/services/list.js";
-
-const cards = ref([]);
-
-onMounted(async () => {
-    const data = await List.getAll();
-    cards.value = data.map(item => ({
-        title: item.title,
-        imageUrl: item.logo
-    }));
-});
-</script>
+<!-- src/components/List.vue -->
 
 <template>
-    <div class="card-container">
-        <div v-for="(card, index) in cards" :key="index" class="card">
-            <img :src="card.imageUrl" alt="Card Image" />
-            <h3>{{ card.title }}</h3>
-        </div>
+    <div>
+      <ul>
+        <li v-for="item in linksite" :key="item.id">
+          <img :src="item.logo" alt="Logo" />
+          <h2>{{ item.title }}</h2>
+          <a :href="item.url">{{ item.url }}</a>
+        </li>
+      </ul>
     </div>
-</template>
+  </template>
+  
+  <script setup>
+  import { ref, onMounted } from 'vue';
+  import linksiteInstance from '@/services/linksite.js';
+  
+  const linksite = ref([]);
+  
+  onMounted(async () => {
+    linksite.value = await linksiteInstance.getAll();
+  });
+  </script>
 
 <style scoped>
 .card-container {
