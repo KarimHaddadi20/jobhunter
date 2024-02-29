@@ -6,7 +6,9 @@ class Trackingapp {
         return response.data;
     }
 
-    async create(society, status, deadline, description) {
+    async create(job) {
+        const { society, status, deadline, description } = job;
+
         try {
             console.log({society, status, deadline, description}); // Ajoutez cette ligne
     
