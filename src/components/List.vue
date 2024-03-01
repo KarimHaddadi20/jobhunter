@@ -4,7 +4,7 @@
     <div>
       <ul>
         <li v-for="item in linksite" :key="item.id">
-          <img :src="item.logo" alt="Logo" />
+          <img v-if="item.logo[0]" :src="item.logo[0].signedUrl" alt="Logo" />
           <h2>{{ item.title }}</h2>
           <a :href="item.url">{{ item.url }}</a>
         </li>

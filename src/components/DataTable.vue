@@ -23,7 +23,7 @@
     <div>
       <input v-model="newJob.society" placeholder="Entreprise" />
       <input v-model="newJob.status" placeholder="Status" />
-      <input v-model="newJob.deadline" placeholder="Échéance" />
+      <input v-model="newJob.deadline" placeholder="AAAA-MM-J" />
       <input v-model="newJob.description" placeholder="Description du poste" />
       <button @click="addJob">Ajouter</button>
     </div>
@@ -37,10 +37,12 @@ import trackingappInstance from "@/services/trackingapp.js";
 const jobs = ref([]);
 
 const deleteJob = (id) => {
-  jobs.value = jobs.value.filter((job) => job.id !== id);
-  localStorage.setItem("jobs", JSON.stringify(jobs.value));
+  const confirmed = window.confirm("Êtes-vous sûr de vouloir supprimer ce poste ?");
+  if (confirmed) {
+    jobs.value = jobs.value.filter((job) => job.id !== id);
+    localStorage.setItem("jobs", JSON.stringify(jobs.value));
+  }
 };
-
 const newJob = reactive({
   society: "",
   status: "",
