@@ -1,50 +1,29 @@
-<!-- src/components/List.vie -->
-
 <template>
-    <div>
-      <ul>
-        <li v-for="item in linksite" :key="item.id">
-          <img v-if="item.logo[0]" :src="item.logo[0].signedUrl" alt="Logo" />
-          <h2>{{ item.title }}</h2>
-          <a :href="item.url">{{ item.url }}</a>
-        </li>
-      </ul>
+  <div class="container">
+    <div class="row">
+      <div v-for="item in linksite" :key="item.id" class="col-md-3 mb-3">
+        <div class="card h-100" style="width: 14rem;">
+          <img v-if="item.logo[0]" :src="item.logo[0].signedUrl" class="card-img-top" alt="Logo" />
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">{{ item.title }}</h5>
+            <p class="card-text">{{ item.url }}</p>
+            <a :href="item.url" class="btn btn-primary mt-auto">visiter le site</a>
+          </div>
+        </div>
+      </div>
     </div>
-  </template>
-  
-  <script setup>
-  import { ref, onMounted } from 'vue';
-  import linksiteInstance from '@/services/linksite.js';
-  
-  const linksite = ref([]);
-  
-  onMounted(async () => {
-    linksite.value = await linksiteInstance.getAll();
-    console.log(linksite); // Ajoutez cette ligne
-    linksite.value = linksite.value.list;
+  </div>
+</template>
 
+<script setup>
+import { ref, onMounted } from 'vue';
+import linksiteInstance from '@/services/linksite.js';
 
-  });
-  </script>
+const linksite = ref([]);
 
-<style scoped>
-.card-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    /* 4 columns */
-    grid-template-rows: repeat(2, auto);
-    /* 2 rows */
-    grid-gap: 20px;
-}
-
-.card {
-    width: 100%;
-    border: 1px solid #ccc;
-    padding: 10px;
-}
-
-.card img {
-    max-width: 100%;
-    height: auto;
-}
-</style>
+onMounted(async () => {
+linksite.value = await linksiteInstance.getAll();
+console.log(linksite);
+linksite.value = linksite.value.list;
+});
+</script>
