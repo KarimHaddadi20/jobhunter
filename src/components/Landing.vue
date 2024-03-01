@@ -1,6 +1,6 @@
 <template>
   <div class="center">
-    <h3>Bonjour, bienvenue sur vos candidatures !</h3>
+    <h3>Bonjour, bienvenue sur vos candidatures chomeur!</h3>
   </div>
 </template>
 

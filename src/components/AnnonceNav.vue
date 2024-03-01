@@ -1,4 +1,4 @@
-<!-- NavBar.vue -->
+<!-- AnnonceNavBar.vue -->
 
 <template>
   <nav class="navbar">
@@ -8,7 +8,7 @@
       </a>
     </div>
     <div>
-      <router-link to="/" class="nav-link">Annonces</router-link>
+      <router-link to="/cover" class="nav-link">Annonces</router-link>
       <router-link to="/annonce" class="nav-link">Formulaire</router-link>
       <router-link to="/candidacy" class="nav-link">Suivie</router-link>
       <router-link to="/list" class="nav-link">Recherche</router-link>

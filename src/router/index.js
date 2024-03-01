@@ -4,7 +4,7 @@ import LoginView from '../views/LoginView.vue'
 import AnnonceView from '../views/AnnonceView.vue'
 import CandidacyView from '../views/CandidacyView.vue'
 import ListView from '../views/ListView.vue'
-
+import CoverView from '../views/CoverView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -52,6 +52,14 @@ const router = createRouter({
       name: 'list',
       component: ListView
     },
+
+    {
+
+      path: '/cover',
+      name: 'cover',
+      component: CoverView
+    },
+
 
   ]
 })
