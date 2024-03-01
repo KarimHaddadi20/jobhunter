@@ -31,7 +31,7 @@
       <input v-model="newJob.description" placeholder="Description du poste" />
       <div class="file-input">
         <input type="file" id="fileUpload" @change="onFileChange">
-        <span class="button">Insérer ton CV</span>
+        <span class="button">Insére ton CV</span>
       </div>
             <button @click="addJob">Ajouter</button>
     </div>
