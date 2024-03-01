@@ -7,6 +7,7 @@
           <th>Status</th>
           <th>Échéance</th>
           <th>Description du poste</th>
+          <th>CV</th>
         </tr>
       </thead>
       <tbody>
@@ -15,6 +16,9 @@
           <td>{{ job.status }}</td>
           <td>{{ job.deadline }}</td>
           <td>{{ job.description }}</td>
+          <td>
+            <a :href="job.cv" target="_blank">Voir CV</a>
+          </td>
           <td><button @click="deleteJob(job.id)">Supprimer</button></td>
         </tr>
       </tbody>
@@ -23,9 +27,13 @@
     <div>
       <input v-model="newJob.society" placeholder="Entreprise" />
       <input v-model="newJob.status" placeholder="Status" />
-      <input v-model="newJob.deadline" placeholder="AAAA-MM-J" />
+      <input v-model="newJob.deadline" placeholder="AAAA-MM-JJ" />
       <input v-model="newJob.description" placeholder="Description du poste" />
-      <button @click="addJob">Ajouter</button>
+      <div class="file-input">
+        <input type="file" id="fileUpload" @change="onFileChange">
+        <span class="button">Insérer ton CV</span>
+      </div>
+            <button @click="addJob">Ajouter</button>
     </div>
   </div>
 </template>
@@ -43,12 +51,18 @@ const deleteJob = (id) => {
     localStorage.setItem("jobs", JSON.stringify(jobs.value));
   }
 };
+
 const newJob = reactive({
   society: "",
   status: "",
   deadline: "",
   description: "",
+  cv: null,
 });
+
+const onFileChange = (e) => {
+  newJob.cv = URL.createObjectURL(e.target.files[0]);
+};
 
 const addJob = async () => {
   jobs.value.push({ ...newJob, id: Date.now() });
@@ -71,8 +85,11 @@ const addJob = async () => {
   }
 
   for (let key in newJob) {
-    newJob[key] = "";
+    if (key !== 'cv') {
+      newJob[key] = "";
+    }
   }
+  newJob.cv = null;
 };
 
 onMounted(() => {
@@ -121,4 +138,38 @@ button {
 button:hover {
   background-color: #45a049;
 }
+
+
+.file-input {
+  position: relative;
+  display: inline-block;
+}
+
+.file-input input[type="file"] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.file-input .button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+}
+
+.file-input .button:hover {
+  background-color: #45a049;
+}
+
+.file-input, .add-button {
+  display: block;
+  margin-bottom: 10px;
+}
+
 </style>
