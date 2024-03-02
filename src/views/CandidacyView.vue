@@ -41,9 +41,9 @@ onMounted(() => {
     <AnnonceNav />
   </div>
 
-  <div>
+  <!-- <div>
     <Landing />
-  </div>
+  </div> -->
 
   <div>
     <DataTable />
