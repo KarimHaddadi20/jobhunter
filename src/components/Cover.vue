@@ -7,8 +7,11 @@
         placeholder="Lettre de motivation"
       ></textarea>
       <button @click="addLetter">sauvegarder</button>
-      <button @click="deleteLetter">Supprimer</button>
-      <p>{{ insertedLetter }}</p>
+      <button @click="deleteAllLetters">Supprimer tout</button>
+      <div v-for="(letter, index) in insertedLetters" :key="index">
+        <p>{{ letter }}</p>
+        <button @click="deleteLetter(index)">Supprimer cette lettre</button>
+      </div>
     </div>
   </div>
 </template>
@@ -22,24 +25,31 @@ const newLetter = ref({
   cover: "",
 });
 
-let insertedLetter = ref(localStorage.getItem('insertedLetter') || "");
+let insertedLetters = ref(JSON.parse(localStorage.getItem('insertedLetters')) || []);
 
 const addLetter = async () => {
   try {
     await coverletterInstance.create(newLetter.value.cover);
-    insertedLetter.value = newLetter.value.cover;
-    localStorage.setItem('insertedLetter', insertedLetter.value);
+    insertedLetters.value.push(newLetter.value.cover);
+    localStorage.setItem('insertedLetters', JSON.stringify(insertedLetters.value));
     newLetter.value.cover = "";
-    console.log("Job ajouté avec succès à la base de données");
+    console.log("Lettre de motivation ajoutée avec succès à la base de données");
   } catch (error) {
     console.error("Une erreur est survenue lors de l'ajout de la lettre de motivation à la base de données");
   }
 };
 
-const deleteLetter = () => {
+const deleteLetter = (index) => {
   if (confirm("Êtes-vous sûr de vouloir supprimer cette lettre de motivation ?")) {
-    insertedLetter.value = "";
-    localStorage.removeItem('insertedLetter');
+    insertedLetters.value.splice(index, 1);
+    localStorage.setItem('insertedLetters', JSON.stringify(insertedLetters.value));
+  }
+};
+
+const deleteAllLetters = () => {
+  if (confirm("Êtes-vous sûr de vouloir supprimer toutes les lettres de motivation ?")) {
+    insertedLetters.value = [];
+    localStorage.removeItem('insertedLetters');
   }
 };
 </script>
