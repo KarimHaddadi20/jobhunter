@@ -53,7 +53,8 @@ const logout = () => {
   font-style: normal;
   margin-right: 4em;
   color: white;
-  line-height: 60px; /* Ajouter une hauteur de ligne */
+  line-height: 60px;
+  font-size: 18px;
 }
 
 .icon {

@@ -116,6 +116,8 @@ td {
   border: 1px solid #ffffff;
   padding: 8px;
   text-align: left;
+  font-size: 12px;
+
 }
 
 th {
@@ -134,6 +136,9 @@ input {
   font-family: "Roboto Slab", serif;
   border-radius: 5px;
   border: 1px solid #ffffff;
+  font-size: 12px;
+
+
 }
 
 button {
@@ -145,6 +150,8 @@ button {
   cursor: pointer;
   border-radius: 5px;
   font-family: "Roboto Slab", serif;
+  font-size: 12px;
+  margin-bottom: 20px;
 }
 
 button:hover {
@@ -173,6 +180,9 @@ button:hover {
   color: white;
   cursor: pointer;
   border-radius: 5px;
+  font-size: 12px;
+  margin-top: 15px;
+
 }
 
 .file-input .button:hover {
@@ -192,4 +202,10 @@ h3 {
   font-size: 2.1em;
   color: #ffffff;
 }
+
+::placeholder {
+  color: #00000034;
+  opacity: 1;
+}
+
 </style>
