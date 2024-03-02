@@ -50,7 +50,6 @@ const logout = () => {
 .nav-link {
   display: inline-block;
   font-family: "Roboto Slab", serif;
-  font-weight: 400;
   font-style: normal;
   margin-right: 4em;
   color: white;
