@@ -5,24 +5,17 @@ import coverletterInstance from "@/services/coverletter.js";
 import AnnonceNav from "@/components/AnnonceNav.vue";
 import Cover from "@/components/Cover.vue";
 
-
-
-
-
 const websites = ref([]);
 const coverletter = ref([]);
-
-
 
 async function loadData() {
   let data = await WebsiteGetAll();
   websites.value = data.list;
-  console.log(websites.value); // Ajoutez cette ligne
-
+  console.log(websites.value);
 
   let coverletterData = await coverletterInstance.getAll();
   coverletter.value = coverletterData;
-  console.log(coverletter.value); // Ajoutez cette ligne
+  console.log(coverletter.value);
 }
 
 onMounted(() => {
@@ -38,15 +31,12 @@ onMounted(() => {
       <AnnonceNav class="annonces" />
       <div class="rectangle-97">
         <Cover class="datatable formulaire" />
-        <!-- Ajoutez vos autres éléments ici -->
       </div>
     </div>
   </div>
 </template>
 
 <style scoped>
-
-
 .macbook-air-5 {
   position: relative;
   width: 100vw;
@@ -55,7 +45,6 @@ onMounted(() => {
   backdrop-filter: blur(10px);
   background: #d5efff url("@/assets/background.jpg");
 }
-
 
 .rectangle-96 {
   position: absolute;
@@ -67,10 +56,8 @@ onMounted(() => {
   border-radius: 20px;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add this line */
-
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
-
 
 .rectangle-97 {
   position: absolute;
@@ -86,10 +73,7 @@ onMounted(() => {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   scrollbar-width: thin;
   scrollbar-color: rgb(255, 255, 255) rgb(117, 94, 215);
-
-
 }
-
 
 .annonces {
   position: absolute;
@@ -104,6 +88,4 @@ onMounted(() => {
   line-height: 5vh;
   color: #ffffff;
 }
-
-
 </style>

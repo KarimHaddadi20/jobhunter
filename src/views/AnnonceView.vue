@@ -18,9 +18,6 @@ onMounted(() => {
 </script>
 
 <template>
-
-
-  
   <div>
     <NavBar />
   </div>
@@ -29,6 +26,5 @@ onMounted(() => {
     <Formulaire />
   </div>
 </template>
-
 
 <style scoped></style>

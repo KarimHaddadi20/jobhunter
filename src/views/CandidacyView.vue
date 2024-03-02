@@ -2,11 +2,9 @@
 import { WebsiteGetAll } from "@/services/website.js";
 import { ref, onMounted } from "vue";
 import AnnonceNav from "@/components/AnnonceNav.vue";
-import Landing from "@/components/Landing.vue";
 import DataTable from "@/components/DataTable.vue";
 import candidacyInstance from "@/services/candidacy.js";
 import trackingappInstance from "@/services/trackingapp.js";
-import NavCandidacy from "@/components/NavCandidacy.vue";
 
 const websites = ref([]);
 const candidacies = ref([]);
@@ -39,7 +37,6 @@ onMounted(() => {
       <AnnonceNav class="annonces" />
       <div class="rectangle-97">
         <DataTable class="datatable formulaire" />
-        <!-- Ajoutez vos autres éléments ici -->
       </div>
     </div>
   </div>
@@ -65,8 +62,7 @@ onMounted(() => {
   border-radius: 20px;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add this line */
-
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .rectangle-97 {
@@ -83,8 +79,6 @@ onMounted(() => {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   scrollbar-width: thin;
   scrollbar-color: rgb(255, 255, 255) rgb(117, 94, 215);
-
-
 }
 
 .annonces {

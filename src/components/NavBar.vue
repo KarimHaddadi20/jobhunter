@@ -10,7 +10,6 @@
     <div>
       <router-link to="/signup" class="nav-link">S'inscrire</router-link>
       <router-link to="/login" class="nav-link">Se connecter</router-link>
-      
     </div>
   </nav>
 </template>
@@ -44,14 +43,14 @@
   margin-right: 15em;
   color: #0d74ce;
 
-  border: 1px solid #7dcedc; /* Change 'blue' to any color you want */
-  background-color: white; /* Change 'white' to any color you want */
-  text-decoration: none; /* Removes the underline */
-  padding: 8px; /* Adds some space around the text */
-  border-radius: 5px; /* Rounds the corners of the button */
+  border: 1px solid #7dcedc;
+  background-color: white;
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 5px;
 }
 
 .nav-link:not(:last-of-type) {
-  margin-right: 1em; /* Adjust this value to your needs */
+  margin-right: 1em;
 }
 </style>

@@ -25,31 +25,49 @@ const newLetter = ref({
   cover: "",
 });
 
-let insertedLetters = ref(JSON.parse(localStorage.getItem('insertedLetters')) || []);
+let insertedLetters = ref(
+  JSON.parse(localStorage.getItem("insertedLetters")) || []
+);
 
 const addLetter = async () => {
   try {
     await coverletterInstance.create(newLetter.value.cover);
     insertedLetters.value.push(newLetter.value.cover);
-    localStorage.setItem('insertedLetters', JSON.stringify(insertedLetters.value));
+    localStorage.setItem(
+      "insertedLetters",
+      JSON.stringify(insertedLetters.value)
+    );
     newLetter.value.cover = "";
-    console.log("Lettre de motivation ajoutée avec succès à la base de données");
+    console.log(
+      "Lettre de motivation ajoutée avec succès à la base de données"
+    );
   } catch (error) {
-    console.error("Une erreur est survenue lors de l'ajout de la lettre de motivation à la base de données");
+    console.error(
+      "Une erreur est survenue lors de l'ajout de la lettre de motivation à la base de données"
+    );
   }
 };
 
 const deleteLetter = (index) => {
-  if (confirm("Êtes-vous sûr de vouloir supprimer cette lettre de motivation ?")) {
+  if (
+    confirm("Êtes-vous sûr de vouloir supprimer cette lettre de motivation ?")
+  ) {
     insertedLetters.value.splice(index, 1);
-    localStorage.setItem('insertedLetters', JSON.stringify(insertedLetters.value));
+    localStorage.setItem(
+      "insertedLetters",
+      JSON.stringify(insertedLetters.value)
+    );
   }
 };
 
 const deleteAllLetters = () => {
-  if (confirm("Êtes-vous sûr de vouloir supprimer toutes les lettres de motivation ?")) {
+  if (
+    confirm(
+      "Êtes-vous sûr de vouloir supprimer toutes les lettres de motivation ?"
+    )
+  ) {
     insertedLetters.value = [];
-    localStorage.removeItem('insertedLetters');
+    localStorage.removeItem("insertedLetters");
   }
 };
 </script>
@@ -60,11 +78,9 @@ textarea {
   height: 150px;
   margin-bottom: 10px;
   padding: 10px;
-  background: transparent; /* Rend le fond transparent */
-  border: 1px solid white; /* Ajoute une bordure blanche */
-  color: white; /* Change la couleur du texte en blanc */
-
-
+  background: transparent; 
+  border: 1px solid white; 
+  color: white; 
 }
 
 button {
@@ -79,21 +95,14 @@ button {
   margin-right: 10px;
 }
 
-
 .container {
-
-margin-top: 50px;
-padding-left: 25px;
-padding-right: 25px;
-
-
+  margin-top: 50px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 h3 {
-
-
-margin-bottom: 35px;
-
+  margin-bottom: 35px;
 }
 
 p {
@@ -103,18 +112,12 @@ p {
 }
 
 h3 {
-
-font-family: "Roboto Slab", serif;
-color: #ffffff;
-
-
+  font-family: "Roboto Slab", serif;
+  color: #ffffff;
 }
-
 
 ::placeholder {
-  
-  color: rgb(182, 180, 180); /* Change la couleur du texte en blanc */
-  opacity: 1; /* Ajoute une opacité */
+  color: rgb(182, 180, 180);
+  opacity: 1; 
 }
-
 </style>

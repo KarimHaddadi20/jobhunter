@@ -134,7 +134,6 @@ input {
   font-family: "Roboto Slab", serif;
   border-radius: 5px;
   border: 1px solid #ffffff;
-
 }
 
 button {

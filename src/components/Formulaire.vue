@@ -7,11 +7,6 @@
           <input id="title" v-model="form.title" type="text" required />
         </div>
 
-        <!-- <div>
-        <label for="logo">Logo:</label>
-        <input id="logo" v-model="form.logo" type="text" required>
-      </div> -->
-
         <div>
           <label for="society">Nom de la société:</label>
           <input id="society" v-model="form.society" type="text" required />
@@ -72,7 +67,7 @@ const submitForm = async () => {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Utilisez 100vh pour prendre toute la hauteur de la fenêtre de visualisation */
+  height: 100vh; 
   background-color: skyblue;
 }
 
@@ -93,7 +88,7 @@ const submitForm = async () => {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Utilisez 100vh pour prendre toute la hauteur de la fenêtre de visualisation */
+  height: 100vh; 
   background-color: skyblue;
   margin: auto;
   height: 70vh;
@@ -116,7 +111,7 @@ const submitForm = async () => {
 }
 
 .image-container img {
-  width: 90%; /* Ajustez cette valeur pour changer la largeur de l'image */
-  height: auto; /* Ajustez cette valeur pour changer la hauteur de l'image */
+  width: 90%; 
+  height: auto; 
 }
 </style>

@@ -13,32 +13,25 @@
       <router-link to="/candidacy" class="nav-link">Suivie</router-link>
       <router-link to="/list" class="nav-link">Recherche</router-link>
       <button @click="logout" class="nav-link">Déconnexion</button>
-
     </div>
   </nav>
 </template>
 
 <script setup>
-import { useRouter } from 'vue-router';
-
+import { useRouter } from "vue-router";
 
 const router = useRouter();
-
 
 const logout = () => {
   // Clear user data
   // This depends on how you're storing user data
   // For example, if you're using Vuex, you might dispatch a logout action
-
   // Redirect to home page
-  router.push('/');
+  router.push("/");
 };
-
 </script>
 
 <style scoped>
-
-
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -48,8 +41,7 @@ const logout = () => {
 
 .logo {
   height: 120px;
-  
-  }
+}
 
 .links {
   display: flex;
@@ -63,5 +55,4 @@ const logout = () => {
   margin-right: 12em;
   color: white;
 }
-
 </style>
