@@ -12,6 +12,7 @@
     "@radix-ui/themes": "^2.0.3",
     "axios": "^1.6.7",
     "bootstrap": "^5.3.3",
+    "bootstrap-vue": "^2.23.1",
     "pinia": "^2.1.7",
     "primeicons": "^6.0.1",
     "primevue": "^3.49.1",
