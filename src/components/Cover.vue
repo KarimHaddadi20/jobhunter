@@ -1,12 +1,14 @@
 <template>
   <div>
-    <h1>bonjour</h1>
+    <h1>Lettre de motivation</h1>
     <div>
       <textarea
         v-model="newLetter.cover"
         placeholder="Lettre de motivation"
       ></textarea>
-      <button @click="addLetter">Insérer</button> <!-- Add this line -->
+      <button @click="addLetter">Insérer</button>
+      <button @click="deleteLetter">Supprimer</button>
+      <p>{{ insertedLetter }}</p>
     </div>
   </div>
 </template>
@@ -20,12 +22,24 @@ const newLetter = ref({
   cover: "",
 });
 
+let insertedLetter = ref(localStorage.getItem('insertedLetter') || "");
+
 const addLetter = async () => {
   try {
     await coverletterInstance.create(newLetter.value.cover);
+    insertedLetter.value = newLetter.value.cover;
+    localStorage.setItem('insertedLetter', insertedLetter.value);
+    newLetter.value.cover = "";
     console.log("Job ajouté avec succès à la base de données");
   } catch (error) {
     console.error("Une erreur est survenue lors de l'ajout de la lettre de motivation à la base de données");
+  }
+};
+
+const deleteLetter = () => {
+  if (confirm("Êtes-vous sûr de vouloir supprimer cette lettre de motivation ?")) {
+    insertedLetter.value = "";
+    localStorage.removeItem('insertedLetter');
   }
 };
 </script>

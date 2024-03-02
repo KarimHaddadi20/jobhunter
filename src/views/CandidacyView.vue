@@ -8,6 +8,7 @@ import candidacyInstance from "@/services/candidacy.js";
 import trackingappInstance from "@/services/trackingapp.js";
 import NavCandidacy from "@/components/NavCandidacy.vue";
 
+
 const websites = ref([]);
 const candidacies = ref([]);
 const trackingapp = ref([]);
