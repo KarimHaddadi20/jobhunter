@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h1>Lettre de motivation</h1>
+  <div class="container">
+    <h3>Saisissez votre lettre de motivation</h3>
     <div>
       <textarea
         v-model="newLetter.cover"
@@ -60,10 +60,61 @@ textarea {
   height: 150px;
   margin-bottom: 10px;
   padding: 10px;
+  background: transparent; /* Rend le fond transparent */
+  border: 1px solid white; /* Ajoute une bordure blanche */
+  color: white; /* Change la couleur du texte en blanc */
+
+
 }
 
 button {
+  background-color: #8ec8f6;
+  color: rgb(255, 255, 255);
   padding: 10px 20px;
   margin-top: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: "Roboto Slab", serif;
+  margin-right: 10px;
 }
+
+
+.container {
+
+margin-top: 50px;
+padding-left: 25px;
+padding-right: 25px;
+
+
+}
+
+h3 {
+
+
+margin-bottom: 35px;
+
+}
+
+p {
+  color: white;
+  padding-top: 100px;
+  padding-bottom: 25px;
+}
+
+h3 {
+
+font-family: "Roboto Slab", serif;
+color: #ffffff;
+
+
+}
+
+
+::placeholder {
+  
+  color: rgb(182, 180, 180); /* Change la couleur du texte en blanc */
+  opacity: 1; /* Ajoute une opacité */
+}
+
 </style>
