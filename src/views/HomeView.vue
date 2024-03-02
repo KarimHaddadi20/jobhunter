@@ -33,10 +33,7 @@ onMounted(() => {
     <Confidence />
   </div>
 
-<div>
 
-  <DataTable />
-</div>
 
 
 
