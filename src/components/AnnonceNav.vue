@@ -8,11 +8,11 @@
       </a>
     </div>
     <div>
-      <router-link to="/cover" class="nav-link">Annonces</router-link>
-      <router-link to="/annonce" class="nav-link">Formulaire</router-link>
-      <router-link to="/candidacy" class="nav-link">Suivie</router-link>
-      <router-link to="/list" class="nav-link">Recherche</router-link>
-      <button @click="logout" class="nav-link">Déconnexion</button>
+      <router-link to="/cover" class="nav-link"><img src="@/assets/icon11.png" alt="Icon" class="icon"> Annonces</router-link>
+      <router-link to="/annonce" class="nav-link"><img src="@/assets/icon8.png" alt="Icon" class="icon"> Formulaire</router-link>
+      <router-link to="/candidacy" class="nav-link"><img src="@/assets/icon9.png" alt="Icon" class="icon"> Suivie</router-link>
+      <router-link to="/list" class="nav-link"><img src="@/assets/icon12.png" alt="Icon" class="icon"> Recherche</router-link>
+      <button @click="logout" class="nav-link"><img src="@/assets/icon10.png" alt="Icon" class="icon"> Déconnexion</button>
     </div>
   </nav>
 </template>
@@ -52,7 +52,15 @@ const logout = () => {
   font-family: "Roboto Slab", serif;
   font-weight: 400;
   font-style: normal;
-  margin-right: 12em;
+  margin-right: 4em;
   color: white;
+  line-height: 60px; /* Ajouter une hauteur de ligne */
+}
+
+.icon {
+  display: inline-block;
+  height: 45px;
+  margin-right: 5px;
+  /* Supprimer l'alignement vertical */
 }
 </style>
