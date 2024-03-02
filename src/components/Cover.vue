@@ -6,7 +6,7 @@
         v-model="newLetter.cover"
         placeholder="Lettre de motivation"
       ></textarea>
-      <button @click="addLetter">Insérer</button>
+      <button @click="addLetter">sauvegarder</button>
       <button @click="deleteLetter">Supprimer</button>
       <p>{{ insertedLetter }}</p>
     </div>
