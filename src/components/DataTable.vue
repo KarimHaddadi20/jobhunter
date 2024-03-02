@@ -1,5 +1,9 @@
 <template>
   <div>
+    <div>
+      <h3>Bienvenue sur vos candidatures</h3>
+    </div>
+
     <table>
       <thead>
         <tr>
@@ -30,10 +34,10 @@
       <input v-model="newJob.deadline" placeholder="AAAA-MM-JJ" />
       <input v-model="newJob.description" placeholder="Description du poste" />
       <div class="file-input">
-        <input type="file" id="fileUpload" @change="onFileChange">
+        <input type="file" id="fileUpload" @change="onFileChange" />
         <span class="button">Insére ton CV</span>
       </div>
-            <button @click="addJob">Ajouter</button>
+      <button @click="addJob">Ajouter</button>
     </div>
   </div>
 </template>
@@ -45,7 +49,9 @@ import trackingappInstance from "@/services/trackingapp.js";
 const jobs = ref([]);
 
 const deleteJob = (id) => {
-  const confirmed = window.confirm("Êtes-vous sûr de vouloir supprimer ce poste ?");
+  const confirmed = window.confirm(
+    "Êtes-vous sûr de vouloir supprimer ce poste ?"
+  );
   if (confirmed) {
     jobs.value = jobs.value.filter((job) => job.id !== id);
     localStorage.setItem("jobs", JSON.stringify(jobs.value));
@@ -85,7 +91,7 @@ const addJob = async () => {
   }
 
   for (let key in newJob) {
-    if (key !== 'cv') {
+    if (key !== "cv") {
       newJob[key] = "";
     }
   }
@@ -102,43 +108,49 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 20px;
+  font-family: "Roboto Slab", serif;
 }
 
 th,
 td {
-  border: 1px solid #ddd;
+  border: 1px solid #ffffff;
   padding: 8px;
   text-align: left;
 }
 
 th {
-  background-color: #4caf50;
+  background-color: #8ec8f6;
   color: white;
 }
 
 tr:nth-child(even) {
-  background-color: #f2f2f2;
+  background-color: #00000000;
 }
 
 input {
   margin-bottom: 10px;
   padding: 10px;
   width: 100%;
+  font-family: "Roboto Slab", serif;
+  border-radius: 5px;
+  border: 1px solid #ffffff;
+
 }
 
 button {
-  background-color: #4caf50;
+  background-color: #8ec8f6;
   color: white;
   padding: 10px 20px;
   margin-top: 10px;
   border: none;
   cursor: pointer;
+  border-radius: 5px;
+  font-family: "Roboto Slab", serif;
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: #8ec8f6;
 }
-
 
 .file-input {
   position: relative;
@@ -158,18 +170,27 @@ button:hover {
 .file-input .button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #4caf50;
+  background-color: #8ec8f6;
   color: white;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 .file-input .button:hover {
-  background-color: #45a049;
+  background-color: #8ec8f6;
 }
 
-.file-input, .add-button {
+.file-input,
+.add-button {
   display: block;
   margin-bottom: 10px;
+  font-family: "Roboto Slab", serif;
 }
 
+h3 {
+  font-family: "Roboto Slab", serif;
+  margin-bottom: 45px;
+  font-size: 2.1em;
+  color: #ffffff;
+}
 </style>

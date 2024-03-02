@@ -4,7 +4,7 @@
   <nav class="navbar">
     <div>
       <a href=".">
-        <img src="@/assets/logo.png" alt="Logo" class="logo" />
+        <img src="@/assets/logo2.png" alt="Logo" class="logo" />
       </a>
     </div>
     <div>
@@ -37,6 +37,8 @@ const logout = () => {
 </script>
 
 <style scoped>
+
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -45,9 +47,9 @@ const logout = () => {
 }
 
 .logo {
-  height: 150px;
-  margin: 0 5em;
-}
+  height: 120px;
+  
+  }
 
 .links {
   display: flex;
@@ -55,9 +57,11 @@ const logout = () => {
 
 .nav-link {
   display: inline-block;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Roboto Slab", serif;
   font-weight: 400;
   font-style: normal;
   margin-right: 12em;
+  color: white;
 }
+
 </style>
