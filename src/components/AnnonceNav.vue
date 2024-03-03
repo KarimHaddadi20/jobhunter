@@ -8,11 +8,25 @@
       </router-link>
     </div>
     <div>
-      <router-link to="/candidacy" class="nav-link"><img src="@/assets/icon9.png" alt="Icon" class="icon"> Suivie</router-link>
-      <router-link to="/cover" class="nav-link"><img src="@/assets/icon11.png" alt="Icon" class="icon"> Annonces</router-link>
-      <router-link to="/list" class="nav-link"><img src="@/assets/icon12.png" alt="Icon" class="icon"> Recherche</router-link>
-      <router-link to="/annonce" class="nav-link"><img src="@/assets/icon8.png" alt="Icon" class="icon"> Formulaire</router-link>
-      <button @click="logout" class="nav-link"><img src="@/assets/icon10.png" alt="Icon" class="icon"> Déconnexion</button>
+      <router-link to="/candidacy" class="nav-link"
+        ><img src="@/assets/icon9.png" alt="Icon" class="icon" />
+        Suivie</router-link
+      >
+      <router-link to="/cover" class="nav-link"
+        ><img src="@/assets/icon11.png" alt="Icon" class="icon" />
+        Annonces</router-link
+      >
+      <router-link to="/list" class="nav-link"
+        ><img src="@/assets/icon12.png" alt="Icon" class="icon" />
+        Recherche</router-link
+      >
+      <router-link to="/annonce" class="nav-link"
+        ><img src="@/assets/icon8.png" alt="Icon" class="icon" />
+        Formulaire</router-link
+      >
+      <button @click="logout" class="nav-link">
+        <img src="@/assets/icon10.png" alt="Icon" class="icon" /> Déconnexion
+      </button>
     </div>
   </nav>
 </template>
