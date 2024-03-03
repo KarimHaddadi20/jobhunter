@@ -27,8 +27,9 @@ npm run build
 
 ### ScreenShots of the webb app
 
-![Description de l'image 1](@/assets/1.PNG)
+![Description de l'image 1](@/src/assets/1.PNG)
 
-![Description de l'image 2](@/assets/2.PNG)
+![Description de l'image 1](@/src/assets/2.PNG)
 
-![Description de l'image 3](@/assets/3.PNG)
+
+![Description de l'image 1](@/src/assets/3.PNG)
