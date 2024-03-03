@@ -3,9 +3,9 @@
 <template>
   <nav class="navbar">
     <div>
-      <a href=".">
+      <router-link to="/candidacy">
         <img src="@/assets/logo2.png" alt="Logo" class="logo" />
-      </a>
+      </router-link>
     </div>
     <div>
       <router-link to="/candidacy" class="nav-link"><img src="@/assets/icon9.png" alt="Icon" class="icon"> Suivie</router-link>
