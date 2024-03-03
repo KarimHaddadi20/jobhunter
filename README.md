@@ -29,14 +29,12 @@ npm run build
 
 
 
-![Description de l'image 1](./src/assets/5.PNG)
+![Page création de compte ](./src/assets/5.PNG)
 
-![Description de l'image 1](./src/assets/4.PNG)
+![Page de connexion ](./src/assets/4.PNG)
 
+![Page de suivie de candidature](./src/assets/1.PNG)
 
-![Description de l'image 1](./src/assets/1.PNG)
+![Page Formulaire de création d'annonces de stage](./src/assets/2.PNG)
 
-![Description de l'image 1](./src/assets/2.PNG)
-
-
-![Description de l'image 1](./src/assets/3.PNG)
+![Page pour stocker les lettres de motivations](./src/assets/3.PNG)
