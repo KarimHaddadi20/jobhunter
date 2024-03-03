@@ -1,6 +1,8 @@
 # jobhunter
 
-This template should help get you started developing with Vue 3 in Vite.
+Job Hunter est une application web dynamique conçue avec Vue.js, offrant une interface conviviale pour suivre efficacement les candidatures de stage. Cette application permet aux utilisateurs de gérer leur processus de recherche de stage de manière organisée et méthodique.
+
+
 
 ## Recommended IDE Setup
 
