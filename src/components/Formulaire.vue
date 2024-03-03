@@ -1,11 +1,8 @@
 <template>
-
   <div>
-  <h3>Remplissez le formulaire avec votre annonces</h3>
+    <h3>Remplissez le formulaire avec votre annonces</h3>
   </div>
   <div class="container">
-
-
     <div class="form-container">
       <form @submit.prevent="submitForm">
         <div>
@@ -35,8 +32,6 @@
 
         <button type="submit">Soumettre</button>
       </form>
-
-
     </div>
   </div>
 </template>
@@ -67,7 +62,6 @@ const submitForm = async () => {
 </script>
 
 <style scoped>
-
 .form-container {
   display: flex;
   justify-content: center;
@@ -85,7 +79,7 @@ const submitForm = async () => {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; 
+  height: 100vh;
   margin: auto;
   height: 55vh;
   width: 60%;
@@ -135,13 +129,11 @@ button:hover {
   background-color: #8ec8f6;
 }
 
-
 label {
   color: white;
   font-family: "Roboto Slab", serif;
   font-size: 12px;
 }
-
 
 h3 {
   text-align: center;
@@ -149,10 +141,7 @@ h3 {
   font-family: "Roboto Slab", serif;
   font-size: 20px;
   padding-top: 25px;
-  margin-top: 60px; 
+  margin-top: 60px;
   margin-bottom: 30px;
-
 }
-
-
 </style>

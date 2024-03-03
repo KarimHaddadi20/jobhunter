@@ -24,17 +24,12 @@ onMounted(() => {
       <div class="rectangle-97">
         <Formulaire class="datatable formulaire" />
         <All />
-
       </div>
     </div>
   </div>
 </template>
 
-
 <style scoped>
-
-
-
 .macbook-air-5 {
   position: relative;
   width: 100vw;
@@ -43,7 +38,6 @@ onMounted(() => {
   backdrop-filter: blur(10px);
   background: #d5efff url("@/assets/background.jpg");
 }
-
 
 .rectangle-96 {
   position: absolute;
@@ -57,8 +51,6 @@ onMounted(() => {
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
-
-
 
 .rectangle-97 {
   position: absolute;
@@ -89,5 +81,4 @@ onMounted(() => {
   line-height: 5vh;
   color: #ffffff;
 }
-
 </style>

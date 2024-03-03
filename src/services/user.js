@@ -12,7 +12,6 @@ class User {
     return response.data;
   }
 
-  
   async login(email, password) {
     const response = await instance.get(`/user/`, {
       params: {
