@@ -31,6 +31,9 @@ npm run build
 
 ![Page création de compte ](./src/assets/5.PNG)
 
+
+Page création de compte
+
 ![Page de connexion ](./src/assets/4.PNG)
 
 ![Page de suivie de candidature](./src/assets/1.PNG)
