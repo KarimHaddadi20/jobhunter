@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Liste des candidatures</h1>
+    <h3>Liste des candidatures</h3>
     <ul>
       <li v-for="candidacy in candidacies" :key="candidacy.Id">
         <h2>{{ candidacy.Title }}</h2>
@@ -31,6 +31,13 @@ onMounted(fetchCandidacies);
 
 const deleteCandidacy = async (id) => {
   console.log('Deleting candidacy with id:', id);
+
+
+  if (!window.confirm('Êtes-vous sûr de vouloir supprimer cette candidature ?')) {
+    return;  // Si l'utilisateur a cliqué sur "Annuler", ne rien faire
+  }
+
+
   try {
     await candidacyInstance.delete(id);
     candidacies.value = candidacies.value.filter(candidacy => candidacy.Id !== id);
@@ -46,7 +53,7 @@ const deleteCandidacy = async (id) => {
 </script>
 
 <style scoped>
-h1, h2, p {
+h3, h2, p {
   color: white;
 }
 
@@ -55,10 +62,12 @@ ul {
 }
 
 li {
-  background-color: #8ec8f6;
+  background-color: #ab3d1839;
   margin-bottom: 10px;
   padding: 10px;
   border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  margin-right: 20px;
 }
 
 button {
@@ -74,6 +83,14 @@ button {
 }
 
 button:hover {
-  background-color: #8ec8f6;
+  background-color: #8ec7f662;
 }
+
+
+h3 {
+  text-align: center;
+  margin-bottom: 30px;
+
+}
+
 </style>

@@ -1,5 +1,11 @@
 <template>
+
+  <div>
+  <h3>Remplissez le formulaire avec votre annonces</h3>
+  </div>
   <div class="container">
+
+
     <div class="form-container">
       <form @submit.prevent="submitForm">
         <div>
@@ -136,6 +142,16 @@ label {
   font-size: 12px;
 }
 
+
+h3 {
+  text-align: center;
+  color: white;
+  font-family: "Roboto Slab", serif;
+  font-size: 20px;
+  padding-top: 25px;
+  margin-top: 60px; 
+
+}
 
 
 </style>
