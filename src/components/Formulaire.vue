@@ -150,6 +150,7 @@ h3 {
   font-size: 20px;
   padding-top: 25px;
   margin-top: 60px; 
+  margin-bottom: 30px;
 
 }
 
