@@ -1,5 +1,11 @@
 <template>
+
+  <div>
+  <h3>Remplissez le formulaire avec votre annonces</h3>
+  </div>
   <div class="container">
+
+
     <div class="form-container">
       <form @submit.prevent="submitForm">
         <div>
@@ -81,7 +87,7 @@ const submitForm = async () => {
   align-items: center;
   height: 100vh; 
   margin: auto;
-  height: 70vh;
+  height: 55vh;
   width: 60%;
   border-radius: 2%;
   margin-bottom: 60px;
@@ -136,6 +142,17 @@ label {
   font-size: 12px;
 }
 
+
+h3 {
+  text-align: center;
+  color: white;
+  font-family: "Roboto Slab", serif;
+  font-size: 20px;
+  padding-top: 25px;
+  margin-top: 60px; 
+  margin-bottom: 30px;
+
+}
 
 
 </style>
