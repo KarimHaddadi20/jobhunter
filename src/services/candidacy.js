@@ -18,6 +18,18 @@ class Candidacy {
 
     return response.data;
   }
+  
+  async delete(id) {
+    console.log(id); // Ajoutez cette ligne
+    try {
+        const response = await instance.delete(`/candidacy/${id}`);
+        return response.data;
+    } catch (error) {
+        console.error(
+            "Une erreur est survenue lors de la suppression du job de la base de données",
+        );
+    }
+  }
 }
 
 const candidacyInstance = new Candidacy();

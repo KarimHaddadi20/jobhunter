@@ -30,9 +30,7 @@
         <button type="submit">Soumettre</button>
       </form>
 
-      <div class="image-container">
-        <img src="@/assets/homepicture.jpg" alt="Description de l'image" />
-      </div>
+
     </div>
   </div>
 </template>
@@ -63,13 +61,6 @@ const submitForm = async () => {
 </script>
 
 <style scoped>
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; 
-  background-color: skyblue;
-}
 
 .form-container {
   display: flex;
@@ -89,7 +80,6 @@ const submitForm = async () => {
   justify-content: center;
   align-items: center;
   height: 100vh; 
-  background-color: skyblue;
   margin: auto;
   height: 70vh;
   width: 60%;
@@ -110,8 +100,42 @@ const submitForm = async () => {
   flex: 1;
 }
 
-.image-container img {
-  width: 90%; 
-  height: auto; 
+input {
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 100%;
+  font-family: "Roboto Slab", serif;
+  border-radius: 5px;
+  border: 1px solid #ffffff;
+  font-size: 12px;
+  background-color: #8ec8f6;
+  color: white;
 }
+
+button {
+  background-color: #8ec8f6;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: "Roboto Slab", serif;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+button:hover {
+  background-color: #8ec8f6;
+}
+
+
+label {
+  color: white;
+  font-family: "Roboto Slab", serif;
+  font-size: 12px;
+}
+
+
+
 </style>
