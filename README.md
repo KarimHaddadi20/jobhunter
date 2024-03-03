@@ -5,13 +5,6 @@ Job Hunter est une application web dynamique conçue avec Vue.js, offrant une in
 Grâce à des fonctionnalités telles que la création de profils personnalisés, le suivi des candidatures, et la gestion des rappels pour les entretiens, "Job Hunter" vise à simplifier le processus de recherche de stage pour les étudiants.
 
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
 
 ## Project Setup
 
@@ -31,7 +24,4 @@ npm run dev
 npm run build
 ```
 
-### todolist 
-
-- authentification qui permettra d'avoir un identifiant pour chaque user qui on lui méme va avoir tout les données chargé basé sur les jetons comme JWT (JSON Web Token),
 
