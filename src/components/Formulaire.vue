@@ -87,7 +87,7 @@ const submitForm = async () => {
   align-items: center;
   height: 100vh; 
   margin: auto;
-  height: 70vh;
+  height: 55vh;
   width: 60%;
   border-radius: 2%;
   margin-bottom: 60px;
