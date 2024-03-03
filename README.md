@@ -28,16 +28,22 @@ npm run build
 ### ScreenShots of the web app
 
 
+Page création de compte
 
 ![Page création de compte ](./src/assets/5.PNG)
 
-
-Page création de compte
+Page de connexion
 
 ![Page de connexion ](./src/assets/4.PNG)
 
+Page de suivie de candidature
+
 ![Page de suivie de candidature](./src/assets/1.PNG)
 
+Page Formulaire de création d'annonces de stage
+
 ![Page Formulaire de création d'annonces de stage](./src/assets/2.PNG)
+
+Page pour stocker les lettres de motivations
 
 ![Page pour stocker les lettres de motivations](./src/assets/3.PNG)
