@@ -7,6 +7,12 @@ class linksite {
     const response = await instance.get(`/list/`);
     return response.data;
   }
+    async getAll() {
+        const response = await instance.get(`/website/`,);
+        return response.data;
+    }
+
+
 }
 
 const linksiteInstance = new linksite();

@@ -26,11 +26,16 @@ import { ref, onMounted } from "vue";
 import linksiteInstance from "@/services/linksite.js";
 
 const linksite = ref([]);
+const error = ref(null);
 
 onMounted(async () => {
-  linksite.value = await linksiteInstance.getAll();
-  console.log(linksite);
-  linksite.value = linksite.value.list;
+  try {
+    linksite.value = await linksiteInstance.getAll();
+    linksite.value = linksite.value.list;
+  } catch (err) {
+    console.error(err);
+    error.value = err;
+  }
 });
 </script>
 
