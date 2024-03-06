@@ -5,6 +5,9 @@ Job Hunter est une application web dynamique conçue avec Vue.js, offrant une in
 Grâce à des fonctionnalités telles que la création de profils , le suivi des candidatures, et la gestion des rappels pour les entretiens, "Job Hunter" vise à simplifier le processus de recherche de stage pour les étudiants.
 
 
+difficulté rencontré : la gestion du temps 
+
+on aurait pu faire : la base de donnée séparer entre chaque users 
 
 ## Project Setup
 
